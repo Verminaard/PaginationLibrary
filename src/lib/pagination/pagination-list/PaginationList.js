@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PageButton from '../page-button/PageButton';
-import Const from '../../constants/index';
+import Const from "../constants/const";
 
 class PaginationList extends Component {
    constructor(props, context) {

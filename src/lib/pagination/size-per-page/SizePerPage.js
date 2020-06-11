@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Const from '../../constants/index';
 import SimpleSelect from "./SimpleSelect";
+import Const from "../constants/const";
 
 const SizePerPage = ({ sizePerPage, options, onChange }) => (
    <SimpleSelect

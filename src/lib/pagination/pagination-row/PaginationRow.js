@@ -3,7 +3,7 @@ import React from 'react';
 import TableInfo from '../table-info/TableInfo';
 import SizePerPage from '../size-per-page/SizePerPage';
 import PaginationList from '../pagination-list/PaginationList';
-import Const from "../../../index";
+import Const from "../constants/const";
 
 const PaginationRow = (props) => (
    <div className="row">

@@ -21,3 +21,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+*.log
+*.ipr
+*.iml
+*.iws
+.idea/
+**/.gradle/
+build/
+*/build/
+node_modules/
+**/app/vendor/
