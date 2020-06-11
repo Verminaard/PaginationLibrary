@@ -1,13 +1,11 @@
 import React from 'react';
 import {render} from "react-dom";
-import PaginationRow from "./lib/pagination/pagination-row/PaginationRow";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import DemoContainer from "./demo/DemoContainer";
 
 const App = () => (
-   <PaginationRow
-      page={1}
-      sizePerPage={10}
-      itemCount={100}
-   />
+   <DemoContainer/>
 );
 
 render(<App/>, document.getElementById("root"));
