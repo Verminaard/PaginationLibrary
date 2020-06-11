@@ -115,7 +115,7 @@ const DemoTable = (props) => {
          onChangePage={props.onChangePage}
          onChangeSizePerPage={props.onChangeSizePerPage}
          sizePerPage={props.count}
-         itemCount={data.length}
+         itemCount={data.length+1}
       />
    );
 
@@ -124,6 +124,8 @@ const DemoTable = (props) => {
          dataList={data}
          paginationRow={pagination}
          columns={columns}
+         sizePerPage={props.count}
+         page={props.page}
       />
    );
 };

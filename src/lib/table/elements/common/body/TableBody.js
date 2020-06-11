@@ -12,17 +12,26 @@ const TableBody = (props) => {
       paginationRow,
       emptyText,
       selectOptions,
-      getRowClassName
+      getRowClassName,
+      sizePerPage,
+      page
    } = props;
    if (dataList && dataList.length) {
-      for (let i = 0; i < dataList.length; i++) {
+      let by = 0
+      let to = dataList.length
+      if (!(sizePerPage === undefined || page === undefined)) {
+         by = page === 1 ? 1 : (page - 1) * sizePerPage;
+         to = dataList.length+1 >= page * sizePerPage ? page * sizePerPage : (page * sizePerPage) - (page * sizePerPage - dataList.length-1)
+      }
+
+      for (let i = by; i < to; i++) {
          rows.push(
             <TableRow
-               key={dataList[i].id || uniqueId()}
+               key={dataList[i-1].id || uniqueId()}
                columns={columns}
                getRowClassName={getRowClassName}
                selectOptions={selectOptions}
-               item={dataList[i]}
+               item={dataList[i-1]}
             />
          );
       }
@@ -30,8 +39,8 @@ const TableBody = (props) => {
          <tbody>
             {rows}
             {paginationRow && (
-               <tr key="pagination">
-                  <td colSpan={columns.length}>{paginationRow}</td>
+               <tr key="pagination" className="bg-white">
+                  <td>{paginationRow}</td>
                </tr>
             )}
          </tbody>

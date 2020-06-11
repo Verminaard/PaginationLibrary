@@ -1,11 +1,11 @@
 import React from 'react';
 
 import SimpleSelect from "./SimpleSelect";
-import Const from "../constants/const";
+import Const from "../constants/pagConsts";
 
 const SizePerPage = ({ sizePerPage, options, onChange }) => (
    <SimpleSelect
-      className="clear-both dropdown-width"
+      className="btn btn-sm bg-white dropdown-toggle"
       notClearableOptions
       onChange={(value) => onChange && onChange(value)}
       value={{
